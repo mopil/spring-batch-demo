@@ -13,7 +13,7 @@ class JobScheduler(
     private val jobLauncher: JobLauncher,
     private val job: NicknameLoadBatchJob,
 ) {
-    @Scheduled(initialDelay = 10000, fixedDelay = 30000)
+//    @Scheduled(initialDelay = 10000, fixedDelay = 30000)
     fun runJob() {
         val confMap: MutableMap<String, JobParameter> = HashMap()
         confMap["time"] = JobParameter(System.currentTimeMillis())
